@@ -57,6 +57,9 @@ public class CarService {
                 .client(client)
                 .build();
     }
+    public CarDto getCar(long id) {
+        return null;
+    }
 
     public CarDto findCar(long id) {
         Car car = carRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid person"));

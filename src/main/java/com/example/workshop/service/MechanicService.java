@@ -1,6 +1,8 @@
 package com.example.workshop.service;
 
 import com.example.workshop.dto.MechanicDto;
+import com.example.workshop.dto.MechanicDto;
+import com.example.workshop.request.MechanicRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,10 @@ public class MechanicService {
     //Car
 
     public MechanicDto createMechanic(){
+        return null;
+    }
+
+    public MechanicDto createMechanic2(MechanicRequest request) {
         return null;
     }
 }

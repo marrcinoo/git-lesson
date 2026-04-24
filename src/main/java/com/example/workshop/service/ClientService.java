@@ -15,7 +15,7 @@ public class ClientService {
     private final ClientRepository clientRepository;
     private final MapperToDto mapper;
 
-    public ClientDto create(ClientRequest clientRequest) {
+    public ClientDto createClient(ClientRequest clientRequest) {
         Client client = Client.builder()
                 .firstName(clientRequest.getFirstName())
                 .lastName(clientRequest.getLastName())
