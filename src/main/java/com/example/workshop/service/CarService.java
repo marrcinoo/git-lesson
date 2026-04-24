@@ -14,6 +14,8 @@ import com.example.workshop.vin.VinResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class CarService {
@@ -54,6 +56,11 @@ public class CarService {
                 .productionYear(vinResponse.getProductionYear())
                 .client(client)
                 .build();
+    }
+
+    public CarDto findCar(long id) {
+        Car car = carRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid person"));
+        return mapperToDto.mapCarToDto(car);
     }
 
     //TODO: POST /cars
