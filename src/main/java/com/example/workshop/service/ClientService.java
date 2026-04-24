@@ -26,6 +26,10 @@ public class ClientService {
         return mapper.mapClientToDto(save);
     }
 
+    public ClientDto getClient(long id) {
+        return null;
+    }
+
     //TODO: GET /clients/{id}
     //GET /clients
     //PUT /clients/{id}
